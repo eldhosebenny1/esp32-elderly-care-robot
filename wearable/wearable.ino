@@ -145,7 +145,7 @@ void updateDemoBPM() {
   Serial.println("***** SIMULATED EXHIBITION BPM *****");
   Serial.printf("Demo BPM value: %.1f\n", stableBPM);
   Serial.println("This value is RANDOM, not a real measurement.");
-  Serial.println("************************************");
+  
 }
 
 void readPulseSignal() {
@@ -243,11 +243,11 @@ void checkFall() {
       freeFallDetected = false;
 
       Serial.println();
-      Serial.println("====================================");
+      
       Serial.println("       !!! IMPACT DETECTED !!!");
       Serial.printf("       Acceleration: %.2f G\n", currentG);
       Serial.println("       Checking subsequent movement");
-      Serial.println("====================================");
+      
     }
   }
 
@@ -265,9 +265,9 @@ void checkFall() {
         fallConfirmed = true;
 
         Serial.println();
-        Serial.println("====================================");
+        
         Serial.println("          FALL CONFIRMED");
-        Serial.println("====================================");
+       
         Serial.println("Please check the person.");
       }
     } else {
@@ -428,9 +428,9 @@ void printReport() {
   healthStatus = getHealthStatus();
 
   Serial.println();
-  Serial.println("========================================");
+ 
   Serial.println("        WEARABLE HEALTH REPORT");
-  Serial.println("========================================");
+  
 
   Serial.printf("BPM MODE              : %s\n",
                 DEMO_RANDOM_BPM ? "RANDOM SIMULATION" : "SENSOR");
@@ -467,7 +467,7 @@ void printReport() {
   Serial.print("Health status         : ");
   Serial.println(healthStatus);
 
-  Serial.println("========================================");
+  
 }
 
 void setup() {
