@@ -215,11 +215,11 @@ void startTrip(String reason) {
   lastEvent = "Trip started: " + reason;
 
   Serial.println();
-  Serial.println("================================");
+  
   Serial.println("ROBOT TRIP STARTED");
   Serial.println(tripReason);
   Serial.println("Following line to room...");
-  Serial.println("================================");
+  
 
   if (reason == "HEALTH ALERT") {
     digitalWrite(LED_PIN, HIGH);
@@ -245,7 +245,7 @@ void arriveAtRoom() {
   }
 
   Serial.println();
-  Serial.println("================================");
+ 
   Serial.println("ARRIVED AT ROOM");
   Serial.println(tripReason);
 
@@ -258,7 +258,7 @@ void arriveAtRoom() {
   }
 
   Serial.println("Waiting 30 seconds...");
-  Serial.println("================================");
+
 }
 
 void runTurnaround() {
@@ -389,10 +389,10 @@ void finishTrip() {
   lastEvent = "Robot returned to base";
 
   Serial.println();
-  Serial.println("================================");
+  
   Serial.println("TRIP COMPLETED");
   Serial.println("Robot returned to base.");
-  Serial.println("================================");
+ 
 }
 
 void openMedicine(int slot) {
